@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick = "console.log('i am here')">EVENT HTML</h1>
+    <BUtton onclick = "alert(50)">Click me</BUtton>
+
+    <p onclick="alert(70)">i am by function here</p>
+    <button onclick="anotherClick()">Click here</button>
+    <p>now i am learning javascript</p>
+
+    <button id="second">Click me-1</button>
+    <button id="third">Click me-2</button>
+    <button id="last-button">Click me-3</button>
+
+
+    <script>       
+        function anotherClick(){
+            console.log("i am here from function");
+        }
+
+        function click(){
+            document.body.style.backgroundColor = 'cyan';
+        }
+        const secondButton = document.getElementById('second');
+        secondButton.onclick = click;
+
+        function backGroundClick (){
+            document.body.style.backgroundColor = 'tomato';
+        }
+        const thirdButton = document.getElementById('third');
+        thirdButton.addEventListener('click', backGroundClick);
+
+        document.getElementById('last-button').addEventListener('click', function(){document.body.style.color = 'orange';});
+    </script>
+</body>
+</html>

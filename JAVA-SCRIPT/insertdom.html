@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <h3 id="first-article">Insert by JAVA SCRIPT</h3>
+        <h3>Insert by JAVA SCRIPT</h3>
+        <h3>Insert by JAVA SCRIPT</h3>
+    </article>
+
+    <ul id="gift-items">
+        <li>gift-item1</li>
+        <li>gift-item2</li>
+        <li>gift-item3</li>
+        <li>gift-item4</li>
+        <li>gift-item5</li>
+    </ul>
+
+    <script>
+        const article = document.getElementById('first-article');
+        const newParagraphTag = document.createElement('p');
+        newParagraphTag.innerHTML = 'This is added by javascript';
+        article.appendChild(newParagraphTag);
+        
+        const giftAdd = document.getElementById('gift-items');
+        const newGiftItem = document.createElement('li');
+        newGiftItem.innerHTML = 'gift-item6';
+        giftAdd.appendChild(newGiftItem);
+    </script>
+</body>
+</html>

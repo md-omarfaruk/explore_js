@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>EXPLORING DOM</h3>
+            <p id="first">My first paragraph</p>
+            <p>this is the second paragraph</p>
+        </section>
+        <section>
+            <article>
+                <h3>article-1
+                    <p class="author">author-1</p>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, omnis, dolores sit odit quidem aspernatur et nobis adipisci vero totam quo itaque molestiae iusto corporis! Mollitia officiis reprehenderit sapiente. Ducimus.</p>
+                </h3>
+            </article>
+            <article>
+                <h3>article-2
+                    <p class="author">author-2</p>
+                    <p class="description">Maiores atque neque quis ratione quibusdam, veniam earum, autem velit excepturi itaque ea in sequi! Adipisci aut autem sit ipsa, placeat voluptatibus, magnam molestiae ex, a enim natus similique sunt!</p>
+                </h3>
+            </article>
+            <article>
+                <h3>article-3
+                    <p class="author">author-3</p>
+                    <p class="description">Velit recusandae laborum ut ab ex assumenda sapiente, reiciendis quasi repudiandae dolor nulla dolorum ad quidem, voluptate illum a minima! Possimus suscipit aliquid sapiente ipsam dicta sequi numquam, sunt explicabo.</p>
+                </h3>
+            </article>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <script>
+        var myFirstJs = document.getElementById('first');
+        myFirstJs.style.color = 'green';
+        myFirstJs.style.backgroundColor = 'yellow';
+        myFirstJs.style.fontSize = '45px';
+
+        var myAuthors = document.getElementsByClassName('author');
+        for (var i = 0; i<myAuthors.length; i++) {
+            var element = myAuthors[i];
+            console.log(element.innerHTML);
+            element.innerHTML = 'lekhok-' + (i+1);
+            element.setAttribute('title', 'All are same');
+            element.style.backgroundColor = 'lightblue';
+            element.style.margin = '10px';
+        }
+            
+    </script>
+</body>
+</html>

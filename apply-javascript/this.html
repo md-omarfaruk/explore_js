@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learning and Practicing about javascript this keyword</h1>
+    <h3 onclick="this.innerText ='Bad! so bad you are' ">Please Don't Click Me</h3>
+
+    <script>
+        const myObject = {
+            name: "Omar",
+            getFullName: function(){
+                console.log(this);
+                return "Md " + this.name;
+            }
+        }
+        myObject.getFullName();
+
+        const anotherObject = {
+            name: "Faruk"
+        };
+
+        anotherObject.getFullName = myObject.getFullName;
+            console.log(anotherObject.getFullName);
+
+            myObject.getFullName();
+            anotherObject.getFullName();
+
+        function add(a , b){
+            console.log(this);
+            return a + b;
+        }
+        add(2, 3);
+
+        anotherObject.sum = add;
+        anotherObject.sum();
+        
+        setTimeout(thisFunction => console.log(this), 1000);
+    </script>
+</body>
+</html>
